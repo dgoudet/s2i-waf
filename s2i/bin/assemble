@@ -24,6 +24,8 @@ fi
 echo "---> Installing application source..."
 #cp -Rf /tmp/src/. ./
 cp /tmp/src/test.crt /etc/httpd/
+cp /tmp/src/httpd2.conf /etc/httpd/conf.d/
+cp /tmp/src/index.html /var/www/html/
 #cp -r /tmp/src/conf.d /etc/httpd/
 #cp -r /tmp/src/modsecurity-lyra /etc/httpd
 
