@@ -40,4 +40,4 @@ RUN chmod -R u+x /usr/libexec/s2i
 EXPOSE 8080
 
 # TODO: Set the default CMD for the image
-CMD ["/usr/libexec/s2i/s2i build src/ waf waf"]
+CMD ["/usr/libexec/s2i/assemble"]
