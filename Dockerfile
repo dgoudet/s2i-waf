@@ -27,7 +27,8 @@ LABEL io.openshift.s2i.scripts-url="image:///usr/libexec/s2i"
 #USER 0
 COPY ./s2i/bin/ /usr/libexec/s2i
 RUn echo "foo"
-#RUN chmod -R u+x /usr/libexec/s2i
+USER 0
+RUN chmod -R u+x /usr/libexec/s2i
 
 # TODO: Drop the root user and make the content of /opt/app-root owned by user 1001
 # RUN chown -R 1001:1001 /opt/app-root
