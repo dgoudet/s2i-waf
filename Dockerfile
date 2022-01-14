@@ -17,7 +17,7 @@ LABEL io.openshift.s2i.scripts-url="image:///usr/libexec/s2i"
 
 # TODO: Install required packages here:
 # RUN yum install -y ... && yum clean all -y
-RUN yum install -y httpd && yum clean all -y
+#RUN yum install -y httpd && yum clean all -y
 
 # TODO (optional): Copy the builder files into /opt/app-root
 # COPY ./<builder_folder>/ /opt/app-root/
