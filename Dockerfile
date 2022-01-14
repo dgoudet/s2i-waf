@@ -24,9 +24,10 @@ LABEL io.openshift.s2i.scripts-url="image:///usr/libexec/s2i"
 
 # TODO: Copy the S2I scripts to /usr/libexec/s2i, since openshift/base-centos7 image
 # sets io.openshift.s2i.scripts-url label that way, or update that label
+#USER 0
 COPY ./s2i/bin/ /usr/libexec/s2i
 RUn echo "foo"
-RUN chmod -R u+x /usr/libexec/s2i
+#RUN chmod -R u+x /usr/libexec/s2i
 
 # TODO: Drop the root user and make the content of /opt/app-root owned by user 1001
 # RUN chown -R 1001:1001 /opt/app-root
