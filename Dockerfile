@@ -1,5 +1,5 @@
 ### waf
-FROM registry.redhat.io/rhel8/httpd-24
+#FROM registry.redhat.io/rhel8/httpd-24
 ###FROM openshift/base-centos7
 ##
 ### TODO: Put the maintainer name in the image metadata
