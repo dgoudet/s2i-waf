@@ -22,6 +22,8 @@ LABEL io.openshift.s2i.scripts-url="image:///usr/libexec/s2i"
 # TODO (optional): Copy the builder files into /opt/app-root
 # COPY ./<builder_folder>/ /opt/app-root/
 
+COPY src/httpd2.conf /opt/app-root/etc/httpd/conf.d
+
 # TODO: Copy the S2I scripts to /usr/libexec/s2i, since openshift/base-centos7 image
 # sets io.openshift.s2i.scripts-url label that way, or update that label
 #USER 0
@@ -32,10 +34,6 @@ RUN chmod -R u+x /usr/libexec/s2i
 ##
 ### TODO: Drop the root user and make the content of /opt/app-root owned by user 1001
 RUN chown -R 1001:1001 /opt/app-root
-
-RUN ls
-RUN ls src/ 
-COPY src/httpd2.conf /opt/app-root/etc/httpd/conf.d
 
 ##
 ### This default user is created in the openshift/base-centos7 image
