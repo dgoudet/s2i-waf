@@ -33,7 +33,8 @@ RUN chmod -R u+x /usr/libexec/s2i
 ### TODO: Drop the root user and make the content of /opt/app-root owned by user 1001
 RUN chown -R 1001:1001 /opt/app-root
 
-COPY ./src/httpd2.conf /etc/httpd/conf.d
+RUN pwd && ls 
+#COPY ./src/httpd2.conf /etc/httpd/conf.d
 
 ##
 ### This default user is created in the openshift/base-centos7 image
