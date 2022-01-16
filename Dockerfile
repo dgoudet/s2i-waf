@@ -23,7 +23,7 @@ LABEL io.openshift.s2i.scripts-url="image:///usr/libexec/s2i"
 # COPY ./<builder_folder>/ /opt/app-root/
 
 RUN echo $(ls /opt/app-root/)
-RUN echo $(ls etc)
+RUN echo $(ls /opt/app-root/etc/)
 COPY src/httpd2.conf /opt/app-root/etc/httpd/conf.d
 
 # TODO: Copy the S2I scripts to /usr/libexec/s2i, since openshift/base-centos7 image
